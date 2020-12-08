@@ -7,6 +7,7 @@ import RecipesList from './components/RecipesList/RecipesList';
 import LoginPage from './components/LoginPage/LoginPage';
 import { Route } from 'react-router-dom';
 import SignUpPage from './components/SignUpPage/SignUpPage';
+import RecipePage from './components/RecipePage/RecipePage';
 
 function App() {
   
@@ -19,7 +20,7 @@ function App() {
         component={LandingPage}
       />
       <Route
-        path='/recipes'
+        exact path='/recipes'
         component={RecipesList}
       />
       <Route
@@ -30,6 +31,9 @@ function App() {
         path='/sign-up'
         component={SignUpPage}
       />
+      <Route
+        path='/recipes/:recipe_id'
+        component={RecipePage}/>
     </section>
   );
 }

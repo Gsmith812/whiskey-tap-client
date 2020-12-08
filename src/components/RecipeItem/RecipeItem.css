@@ -1,12 +1,13 @@
-.RecipeItem {
-    width: 40%;
-    margin: 4%;
+img {
+    width: 100%;
+}
+
+.linked-recipe {
+    text-decoration: none;
+    width: 38%;
+    margin: 5%;
     background-color: orange;
     border-radius: 5px;
     color: white;
     padding: 3% 1%;
-}
-
-img {
-    width: 100%;
 }

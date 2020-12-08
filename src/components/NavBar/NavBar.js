@@ -14,9 +14,6 @@ function NavBar(props) {
                 <NavLink className='navButtons' to='/login'>
                     Login
                 </NavLink>
-                <NavLink className='navButtons' to='/sign-up'>
-                    Sign Up
-                </NavLink>
             </div>
         </nav>
     )
