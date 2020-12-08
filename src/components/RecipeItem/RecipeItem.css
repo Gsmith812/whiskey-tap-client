@@ -1,0 +1,12 @@
+.RecipeItem {
+    width: 40%;
+    margin: 4%;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    padding: 3% 1%;
+}
+
+img {
+    width: 100%;
+}

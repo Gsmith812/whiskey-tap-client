@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import LandingPage from './components/LandingPage/LandingPage';
+import RecipesList from './components/RecipesList/RecipesList';
 import { Route } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       <Route
         exact path='/'
         component={LandingPage}
+      />
+      <Route
+        path='/recipes'
+        component={RecipesList}
       />
     </section>
   );
