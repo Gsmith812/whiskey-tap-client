@@ -1,0 +1,31 @@
+.NavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 1rem;
+}
+
+.homeButton {
+    color: white;
+    text-decoration: none;
+}
+
+.navButtons {
+    margin-right: 1rem;
+    background-color: lightblue;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
