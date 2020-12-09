@@ -1,5 +1,22 @@
 .RecipePage {
-    background-color: grey;
+    background-color: lightgrey;
+    background-size: cover;
+    padding: 1rem;
+    margin: 0;
+}
+
+.recipe-details {
+    background-color: white;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+img {
+    width: 50%;
 }
 
 .notExist {
@@ -9,4 +26,23 @@
     right:25%;
     margin-left: auto;
     margin-right: auto;
+}
+
+ul {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+ol {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description {
+    padding: 0;
 }

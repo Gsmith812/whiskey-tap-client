@@ -15,8 +15,8 @@ function RecipesList(props) {
                             <div className='not-found'><h2>No matching recipes found.</h2></div>
                         )
                     : (
-                        STORE.map(recipe => {
-                           return <RecipeItem recipe={recipe} />
+                        STORE.recipes.map((recipe, i) => {
+                           return <RecipeItem recipe={recipe} key={i} />
                         })
                     )
                 }
