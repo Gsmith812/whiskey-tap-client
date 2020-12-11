@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Comments.css';
 import STORE from '../../dummy-store';
 import moment from 'moment';
+import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 
 function Comments(props) {
+    const { isLoggedIn } = useContext(WhiskeyTapContext);
+
     const recipeComments = STORE.comments.filter(comment => comment.recipe_id === props.recipe_id);
     return (
         <section className='Comments'>
@@ -24,6 +27,15 @@ function Comments(props) {
                         )
                 })}
             </section>
+            {(isLoggedIn === true) && (
+                <section className='comment-form'>
+                    <form>
+                        <label for='add-comment'>Add Comment: </label><br />
+                        <textarea id='add-comment' />
+                        <button type='submit'>Send</button>
+                    </form>
+                </section>
+            )}
         </section>
     )
 }

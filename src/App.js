@@ -25,7 +25,8 @@ function App() {
   const contextValue = {
     isLoggedIn,
     currentUser,
-    loginFunc: handleLogin
+    loginFunc: handleLogin,
+    setIsLoggedIn
   }
 
   return (

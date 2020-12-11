@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './AddRecipe.css';
 import STORE from '../../dummy-store';
+import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 
 
 function AddRecipe(props) {
+
+    const { isLoggedIn } = useContext(WhiskeyTapContext)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -17,6 +20,10 @@ function AddRecipe(props) {
     const handleCancel = e => {
         e.preventDefault();
         props.history.push('/recipes')
+    }
+
+    if(!isLoggedIn) {
+        props.history.push('/login')
     }
 
     return (

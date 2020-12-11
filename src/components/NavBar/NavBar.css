@@ -22,10 +22,20 @@
 
 .navButtons {
     margin-right: 1rem;
-    background-color: lightblue;
+    background-color: lightskyblue;
     padding: 5px 10px;
     border-radius: 1rem;
     text-decoration: none;
     color: black;
+}
+
+.logoutButton {
+    margin-right: 1rem;
+    background-color: lightskyblue;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: black;
+    border: 0;
 }
 

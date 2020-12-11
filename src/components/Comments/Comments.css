@@ -4,7 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .noComments {
@@ -34,4 +34,33 @@ span {
     border-radius: 1rem;
     padding: 3px;
     margin: 3px;
+}
+
+.comment-form {
+    background-color: white;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.comment-form label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 10vh;
+    border-radius: 1rem;
+}
+
+.comment-form button {
+    background-color: chocolate;
+    color: white;
+    border: 0;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    float: right;
 }
