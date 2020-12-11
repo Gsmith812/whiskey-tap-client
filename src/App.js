@@ -9,6 +9,7 @@ import { Route } from 'react-router-dom';
 import SignUpPage from './components/SignUpPage/SignUpPage';
 import RecipePage from './components/RecipePage/RecipePage';
 import WhiskeyTapContext from './context/WhiskeyTapContext';
+import AddRecipe from './components/AddRecipe/AddRecipe';
 
 function App() {
   
@@ -50,6 +51,10 @@ function App() {
           <Route
             path='/recipes/:recipe_id'
             component={RecipePage}
+          />
+          <Route
+            path='/add-recipe'
+            component={AddRecipe}
           />
         </WhiskeyTapContext.Provider>
     </section>

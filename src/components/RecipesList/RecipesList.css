@@ -13,3 +13,12 @@
     border-radius: 10px;
     margin: 0 auto 1rem auto;
 }
+
+.add-recipe {
+    background-color: chocolate;
+    border: 0;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: white;
+}

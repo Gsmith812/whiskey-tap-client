@@ -12,6 +12,7 @@ function RecipePage(props) {
         return (
             <div className='notExist'>
                 <h2>Recipe Doesn't Exist.</h2>
+                <button className='back-button' onClick={() => props.history.goBack()}>Back</button>
             </div>
         )
     }
@@ -19,7 +20,8 @@ function RecipePage(props) {
     return (
         <section className='RecipePage'>
             <section className='recipe-details'>
-                <img src={cocktailImg} alt='Rocks glass for whiskey' />
+                <button className='back-button' onClick={() => props.history.goBack()}>Back</button>
+                <img src={cocktailImg} alt='Rocks glass for whiskey'/>
                 <h2>{matchedRecipe.cocktail_name}</h2>
                 <h3>Created by: {matchedRecipe.user}</h3>
                 <h4>Cocktail-Type: {matchedRecipe.cocktail_type}</h4>

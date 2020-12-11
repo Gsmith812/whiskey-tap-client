@@ -46,3 +46,13 @@ ol {
 .description {
     padding: 0;
 }
+
+.back-button {
+    position: absolute;
+    top: 80px;
+    left:10%;
+    background-color: lightblue;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}

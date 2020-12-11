@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 import STORE from '../../dummy-store';
 import RecipeItem from '../RecipeItem/RecipeItem';
@@ -6,8 +7,6 @@ import './RecipesList.css';
 
 function RecipesList(props) {
     const { currentUser, isLoggedIn } = useContext(WhiskeyTapContext);
-
-    console.log(currentUser, isLoggedIn)
 
     return (
         <section className='RecipesList'>
@@ -26,6 +25,14 @@ function RecipesList(props) {
                     )
                 }
                 </section>
+                {isLoggedIn 
+                    && (
+                        <Link to='/add-recipe'>
+                            <button className='add-recipe'>Add Recipe</button>
+                        </Link>  
+                    )
+                }
+                
             </section>
         </section>
     )

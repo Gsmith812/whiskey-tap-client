@@ -378,10 +378,25 @@ const STORE = {
             "password": "76584873",
             "date_of_birth": "1965-05-29T00:00:00.000Z",
             "date_created": "2020-12-06T02:38:02.250Z"
-        }
-    ]
-
-    
+        },
+    ],
+    "cocktail_types": [
+        "Martini",
+        "Highball",
+        "Lowball",
+        "Snifter"
+    ],
+    "whiskey_types": [
+        "Irish Whiskey",
+        "Scotch Whisky",
+        "Japanese Whisky",
+        "Canadian Whisky",
+        "Bourbon Whiskey",
+        "Tennessee Whiskey",
+        "Rye Whiskey",
+        "Blended Whiskey",
+        "Single Malt Whisky"
+    ],
 }
 
 export default STORE;
