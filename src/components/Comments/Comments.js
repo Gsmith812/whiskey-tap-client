@@ -3,9 +3,14 @@ import './Comments.css';
 import STORE from '../../dummy-store';
 import moment from 'moment';
 import WhiskeyTapContext from '../../context/WhiskeyTapContext';
+import { Link } from 'react-router-dom';
 
 function Comments(props) {
     const { isLoggedIn } = useContext(WhiskeyTapContext);
+
+    const handleSend = e => {
+        e.preventDefault();
+    }
 
     const recipeComments = STORE.comments.filter(comment => comment.recipe_id === props.recipe_id);
     return (
@@ -27,15 +32,20 @@ function Comments(props) {
                         )
                 })}
             </section>
-            {(isLoggedIn === true) && (
-                <section className='comment-form'>
+            <section className='comment-form'>
+                {(isLoggedIn === true) 
+                    ? (
                     <form>
-                        <label for='add-comment'>Add Comment: </label><br />
+                        <label htmlFor='add-comment'>Add Comment: </label><br />
                         <textarea id='add-comment' />
-                        <button type='submit'>Send</button>
+                        <button type='submit' onClick={handleSend}>Send</button>
                     </form>
-                </section>
-            )}
+                    )
+                    : (
+                        <h4><Link to='/login' className='comment-links'>Login</Link> or <Link to='/sign-up' className='comment-links'>Sign-Up</Link> to comment</h4>
+                    )
+                }
+            </section>
         </section>
     )
 }
