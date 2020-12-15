@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './RecipeItem.css';
 import whiskyIcon from '../../assets/whisky.png';
 import { Link } from 'react-router-dom';
+import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 
 function RecipeItem(props) {
+    const { isLoggedIn, currentUser } = useContext(WhiskeyTapContext);
+
     const { cocktail_name, user, id } = props.recipe;
     return (
         <Link to={`/recipes/${id}`} className='linked-recipe'>

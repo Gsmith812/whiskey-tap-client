@@ -15,7 +15,7 @@
     border-radius: 1rem;
 }
 
-.comment-item h4 {
+.comment-header {
     text-align: left;
 }
 
@@ -32,7 +32,7 @@ span {
     background-color: chocolate;
     color:white;
     border-radius: 1rem;
-    padding: 3px;
+    padding: 3px 5px;
     margin: 3px;
 }
 
@@ -41,7 +41,7 @@ span {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-radius: 0 0 1rem 1rem;
 }
 
@@ -67,4 +67,23 @@ span {
 
 .comment-links {
     color: chocolate;
+}
+
+.comment-error {
+    color: red;
+    font-weight: bold;
+}
+
+.edit-icon {
+    float:right;
+    color: chocolate;
+    margin-right: 1rem;
+    margin-top: 5px;
+}
+
+.delete-icon {
+    color: red;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 5px;
 }

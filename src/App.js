@@ -1,5 +1,4 @@
 import { useState, React } from 'react';
-import axios from 'axios';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import LandingPage from './components/LandingPage/LandingPage';
