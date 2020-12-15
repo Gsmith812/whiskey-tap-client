@@ -87,3 +87,7 @@ span {
     margin-right: 1rem;
     margin-top: 5px;
 }
+
+.edit-buttons button{
+    margin-right: 10px;
+}
