@@ -22,13 +22,16 @@ function AddRecipe(props) {
         e.preventDefault();
         const newRecipe = { cocktail_name, whiskey_type, cocktail_type, ingredients, cocktail_steps, created_by: currentUser.id };
         newRecipe.description = description;
-        console.log(newRecipe);
         async function postRecipe() {
             const request = await axios.post(API_BASE_URL + `/recipes`, newRecipe)
-            console.log(request)
+            if(request.status !== 201) {
+                setError({message: `Something went wrong`})
+            }
+            else{
+                props.history.push('/recipes');
+            }
         }
         postRecipe();
-        props.history.push('/recipes');
     }
 
     const handleAddIngredient = e => {

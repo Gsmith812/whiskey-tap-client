@@ -47,6 +47,7 @@ function RecipePage(props) {
 
                     )
                 }
+                <h4>Ingredients</h4>
                 <ul>
                     {
                         ingredients
@@ -56,6 +57,7 @@ function RecipePage(props) {
                             : <div className='notExist'>No Ingredients Found</div>
                     }
                 </ul>
+                <h4>Cocktail Steps</h4>
                 <ol>
                     {
                         cocktail_steps
