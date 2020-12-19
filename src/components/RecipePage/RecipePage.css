@@ -56,3 +56,18 @@ ol {
     padding: .5rem 1rem;
     border-radius: 1rem;
 }
+
+.edit-recipe-container {
+    text-align: right;
+}
+
+.edit-recipe-icon {
+    color: chocolate;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.delete-recipe-icon {
+    color: red;
+    font-size: 25px;
+}

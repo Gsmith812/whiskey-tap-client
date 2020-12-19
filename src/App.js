@@ -9,6 +9,7 @@ import SignUpPage from './components/SignUpPage/SignUpPage';
 import RecipePage from './components/RecipePage/RecipePage';
 import WhiskeyTapContext from './context/WhiskeyTapContext';
 import AddRecipe from './components/AddRecipe/AddRecipe';
+import EditRecipe from './components/EditRecipe/EditRecipe';
 
 function App() {
   
@@ -55,6 +56,10 @@ function App() {
           <Route
             path='/add-recipe'
             component={AddRecipe}
+          />
+          <Route
+            path='/edit-recipe/:recipe_id'
+            component={EditRecipe}
           />
         </WhiskeyTapContext.Provider>
     </section>
