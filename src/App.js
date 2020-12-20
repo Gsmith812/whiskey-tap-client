@@ -18,8 +18,8 @@ function App() {
 
   const handleLogin = (userName, id) => {
     const user = { id, userName}
-    setIsLoggedIn(true);
     setCurrentUser(user);
+    setIsLoggedIn(true);
   }
 
   const contextValue = {

@@ -2,10 +2,13 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 import './LoginPage.css';
-import STORE from '../../dummy-store';
+import axios from 'axios';
+import { API_BASE_URL } from '../../config';
 
 function LoginPage(props) {
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
 
     const { loginFunc } = useContext(WhiskeyTapContext);
@@ -13,18 +16,27 @@ function LoginPage(props) {
     const handleSubmit = e => {
         setError(null);
         e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        const matchedUser = STORE.users.find(user => user.email.toLowerCase() === email.toLowerCase());
-        
-        if(!matchedUser || (matchedUser.password !== password)) {
-            setError(`Username/Password did not match`)
+        const userInfo = { email, password };
+        async function postLogin() {
+            const request = await axios.post(API_BASE_URL + `/users/login`, userInfo)
+                .catch(err => {
+                    if(err.response) {
+                        setError(err.response.data.error.message);
+                    }
+                })
+            if(request) {
+                const { userName, id } = request.data;
+                loginFunc(userName, id);
+                props.history.push('/recipes');
+            }
         }
-        else {
-            loginFunc(matchedUser.first_name, matchedUser.id);
-            props.history.push('/recipes');
-        }
+        postLogin();
     }
+
+   const handleInputsChanged = e => {
+       e.target.name === 'email' && setEmail(e.target.value);
+       e.target.name === 'password' && setPassword(e.target.value);
+   }
 
 
     return (
@@ -33,9 +45,9 @@ function LoginPage(props) {
                 <h2>Login</h2>
                 <div className='input-fields'>
                     <label htmlFor='email'>E-mail Address</label>
-                    <input type='email' id='email' name='email' placeholder='johndoe@gmail.com' required />
+                    <input type='email' id='email' name='email' placeholder='johndoe@gmail.com' onChange={handleInputsChanged} required />
                     <label htmlFor='password'>Password</label>
-                    <input type='password' id='password' name='password' required />
+                    <input type='password' id='password' name='password' onChange={handleInputsChanged} required />
                 </div>
                 <div className='no-account'>
                     <p>Don't have an account yet?<br />
