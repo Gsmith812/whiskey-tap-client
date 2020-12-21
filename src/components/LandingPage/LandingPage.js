@@ -16,13 +16,13 @@ function LandingPage(props) {
                 <Link className='card-links' to='/recipes'>
                     <div className='instruction-card'>
                         <h2>Search Recipes</h2>
-                        <p>Search numerous of user created recipes throughout our database and try your hand at crafting some of these exquisite cockatils.</p>
+                        <p>Search numerous user created recipes throughout our database and try your hand at crafting some of these exquisite cocktails.</p>
                     </div>
                 </Link>
                 <Link className='card-links' to='/sign-up'>
                     <div className='instruction-card'>
                         <h2>Create an Account</h2>
-                        <p>Create your account and stir up some of your own personal creative cocktails, comment on other whiskey enthusiasts recipes, and keep tabs on your favorites cocktails.</p>
+                        <p>Create your account and stir up some of your own personal creative cocktails, comment on other whiskey enthusiasts recipes, and keep tabs on your favorite cocktails.</p>
                     </div>
                 </Link>
             </section>
