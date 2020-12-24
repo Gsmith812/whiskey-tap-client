@@ -4,10 +4,19 @@ img {
 
 .linked-recipe {
     text-decoration: none;
+    color: white;
+}
+
+.RecipeItem {
     width: 38%;
     margin: 5%;
     background-color: orange;
     border-radius: 5px;
-    color: white;
     padding: 3% 1%;
+}
+
+.favorite-icon {
+    color: red;
+    position: absolute;
+    margin-left: 10%;
 }

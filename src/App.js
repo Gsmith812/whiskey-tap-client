@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <section className='App'>
+    <main className='App'>
         <WhiskeyTapContext.Provider value={contextValue}>
           <NavBar />
           <Route
@@ -62,7 +62,7 @@ function App() {
             component={EditRecipe}
           />
         </WhiskeyTapContext.Provider>
-    </section>
+    </main>
   );
 }
 

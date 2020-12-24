@@ -11,15 +11,38 @@ function RecipesList(props) {
     const { currentUser, isLoggedIn } = useContext(WhiskeyTapContext);
 
     const [recipes, setRecipes] = useState([]);
+    const [userFavorites, setUserFavorites] = useState([]);
+    const [error, setError] = useState(null);
     
     useEffect(() => {
         async function fetchRecipes() {
             const request = await axios.get( API_BASE_URL + '/recipes');
             setRecipes(request.data);
         }
+        async function fetchUserFavorites() {
+            const request = await axios.get( API_BASE_URL + `/favorites/${currentUser.id}`);
+            setUserFavorites(request.data);
+        }
         fetchRecipes();
+        fetchUserFavorites();
 
-    }, [])
+    }, [currentUser.id])
+
+    const handleDeleteFavorite = recipeId => {
+        async function deleteFavorite() {
+            const favToRemove = userFavorites.find(fav => fav.recipe_id === recipeId && fav.user_id === currentUser.id)
+            const request = await axios.delete(API_BASE_URL + `/favorites/${currentUser.id}/${favToRemove.id}`)
+            if(!request) {
+                setError(`Something went wrong`); 
+            }
+        }
+        deleteFavorite();
+        setUserFavorites(userFavorites.filter(fav => fav.recipe_id !== recipeId));
+    }
+
+    const handleAddFavorite = newFavorite => {
+        setUserFavorites([...userFavorites, newFavorite ])
+    }
 
     return (
         <section className='RecipesList'>
@@ -33,7 +56,15 @@ function RecipesList(props) {
                         )
                     : (
                         recipes.map((recipe, i) => {
-                           return <RecipeItem recipe={recipe} key={i} />
+                           return (
+                                <RecipeItem 
+                                    recipe={recipe}
+                                    handleDeleteFavorite={handleDeleteFavorite}
+                                    handleAddFavorite={handleAddFavorite}
+                                    isFavorite={userFavorites.find(favorite => favorite.recipe_id === recipe.id) ? true : false} 
+                                    key={i} 
+                                />
+                            )
                         })
                     )
                 }

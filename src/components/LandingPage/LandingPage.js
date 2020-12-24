@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 import './LandingPage.css';
 
 function LandingPage(props) {
+
+    const { isLoggedIn } = useContext(WhiskeyTapContext);
+
     return (
         <section className='LandingPage'>
             <section className='landing-page-hero'>
@@ -19,12 +23,18 @@ function LandingPage(props) {
                         <p>Search numerous user created recipes throughout our database and try your hand at crafting some of these exquisite cocktails.</p>
                     </div>
                 </Link>
-                <Link className='card-links' to='/sign-up'>
-                    <div className='instruction-card'>
-                        <h2>Create an Account</h2>
-                        <p>Create your account and stir up some of your own personal creative cocktails, comment on other whiskey enthusiasts recipes, and keep tabs on your favorite cocktails.</p>
-                    </div>
-                </Link>
+                {
+                    !isLoggedIn && (
+                    <Link className='card-links' to='/sign-up'>
+                        <div className='instruction-card'>
+                            <h2>Create an Account</h2>
+                            <p>Create your account and stir up some of your own personal creative cocktails, comment on other whiskey enthusiasts recipes, and keep tabs on your favorite cocktails.</p>
+                        </div>
+                    </Link>
+                )
+                
+                }
+
             </section>
         </section>
     )
