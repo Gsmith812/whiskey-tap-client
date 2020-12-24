@@ -14,7 +14,7 @@ import EditRecipe from './components/EditRecipe/EditRecipe';
 function App() {
   
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentUser, setCurrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState({ id: 0 });
 
   const handleLogin = (userName, id) => {
     const user = { id, userName}

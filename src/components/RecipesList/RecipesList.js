@@ -13,20 +13,21 @@ function RecipesList(props) {
     const [recipes, setRecipes] = useState([]);
     const [userFavorites, setUserFavorites] = useState([]);
     const [error, setError] = useState(null);
-    
+
     useEffect(() => {
         async function fetchRecipes() {
             const request = await axios.get( API_BASE_URL + '/recipes');
             setRecipes(request.data);
         }
-        async function fetchUserFavorites() {
-            const request = await axios.get( API_BASE_URL + `/favorites/${currentUser.id}`);
-            setUserFavorites(request.data);
+        const fetchUserFavorites = async () => {
+            if(isLoggedIn) {
+                const request = await axios.get( API_BASE_URL + `/favorites/${currentUser.id}`);
+                setUserFavorites(request.data);
+            }
         }
         fetchRecipes();
         fetchUserFavorites();
-
-    }, [currentUser.id])
+    }, [isLoggedIn, currentUser.id])
 
     const handleDeleteFavorite = recipeId => {
         async function deleteFavorite() {
@@ -49,6 +50,7 @@ function RecipesList(props) {
             <section className='recipes-container'>
                 <h2>Welcome, {isLoggedIn ? currentUser.userName : `Guest`}!</h2>
                 <h2>List of Whiskey Cocktails:</h2>
+                {error && (<div className='recipes-error'>{error}</div>)}
                 <section className='recipes'>
                     {(recipes.length === 0) 
                     ? (
