@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import WhiskeyTapContext from '../../context/WhiskeyTapContext';
 import './NavBar.css';
+import Logo from '../../assets/whiskey-tap-logo.svg';
 
 function NavBar(props) {
     const { isLoggedIn, setIsLoggedIn } = useContext(WhiskeyTapContext);
@@ -15,7 +16,7 @@ function NavBar(props) {
         <nav className='NavBar'>
             <div className='logo'>
                 <NavLink className='homeButton' to='/'>
-                    <h3>Whiskey Tap</h3>
+                    <img src={Logo} alt='Whiskey Tap Logo' />
                 </NavLink>
             </div>
             <div className='navLinks'>

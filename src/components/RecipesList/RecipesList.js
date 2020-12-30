@@ -48,8 +48,7 @@ function RecipesList(props) {
     return (
         <section className='RecipesList'>
             <section className='recipes-container'>
-                <h2>Welcome, {isLoggedIn ? currentUser.userName : `Guest`}!</h2>
-                <h2>List of Whiskey Cocktails:</h2>
+                <h1>Welcome, {isLoggedIn ? currentUser.userName : `Guest`}!</h1>
                 {error && (<div className='recipes-error'>{error}</div>)}
                 <section className='recipes'>
                     {(recipes.length === 0) 

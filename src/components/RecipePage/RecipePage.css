@@ -1,5 +1,5 @@
 .RecipePage {
-    background-color: lightgrey;
+    background-color: #031D44;
     background-size: cover;
     padding: 1rem;
     margin: 0;
@@ -17,6 +17,7 @@
 
 img {
     width: 50%;
+    max-width: 300px;
 }
 
 .notExist {
@@ -51,7 +52,7 @@ ol {
     position: absolute;
     top: 80px;
     left:10%;
-    background-color: lightblue;
+    background-color: #00809C;
     border: none;
     padding: .5rem 1rem;
     border-radius: 1rem;
@@ -62,7 +63,7 @@ ol {
 }
 
 .edit-recipe-icon {
-    color: chocolate;
+    color: #E87D22;
     margin-right: 10px;
     font-size: 25px;
 }
@@ -70,4 +71,30 @@ ol {
 .delete-recipe-icon {
     color: red;
     font-size: 25px;
+}
+
+.RecipePage h1 {
+    font-size: 2em;
+}
+
+.recipe-details p, li {
+    text-align: left;
+    margin-left: 3em;
+}
+
+@media all and (min-width: 800px) {
+    .RecipePage {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .recipe-details {
+        margin-right: 1em;
+        width: 50%;
+        margin-left: 2em;
+    }
+
+    .Comments {
+        width: 65%;
+    }
 }

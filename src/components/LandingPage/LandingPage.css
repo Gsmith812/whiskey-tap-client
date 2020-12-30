@@ -9,29 +9,96 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    height: 50vh;
-    margin-top: 30px;
-    width: 100%;
+    height: 100vh;
 }
 
-.hero-content {
-    text-align: center;
+.hero-content h1 {
+    text-align: left;
+    color: #FFFFFF; 
+    font-size: 32px;
+    font-style: oblique;
+    margin-bottom: 0;
+}
+
+.hero-heading-1 {
     position: absolute;
-    top: 25vh;
+    top: 3em;
     left: 15%;
     right: 60%;
-    color: white;
-    text-shadow: orangered 1rem;
+    animation: slide-in 1s ease forwards;
+    animation-delay: .2s;
+    opacity: 0;
+}
+
+.hero-heading-2 {
+    position: absolute;
+    top: 4em;
+    left: 15%;
+    right: 60%;
+    animation: slide-in 1s ease forwards;
+    animation-delay: .4s;
+    opacity: 0;
+}
+
+.hero-heading-3 {
+    position: absolute;
+    top: 5em;
+    left: 15%;
+    right: 60%;
+    animation: slide-in 1s ease forwards;
+    animation-delay: .6s;
+    opacity: 0;
 }
 
 .card-links {
     text-decoration: none;
+    display: inline;
+    color: #FFFFFF;
 }
 
 .instruction-card {
-    margin: 1rem;
-    background-color: rgb(233, 180, 81);
+    margin: 1em;
+    background-color: #5A1807;
     border-radius: 1rem;
     padding: .5rem 1rem;
-    color: black;
+    max-width: 800px;
+    width: 40%;
+    position: relative;
+    top: 20vh;
+}
+
+#card-1 {
+    animation: slide-down 2s ease forwards;
+    animation-delay: .8s;
+    opacity: 0;
+}
+
+#card-2 {
+    animation: slide-down 2s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+/* Keyframe animations */
+
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        left: 0;
+        transform: translateY(0px) translateX(0px) scale(.1);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        top: 10vh;
+    }
+    100% {
+        opacity: 1;
+    }
 }

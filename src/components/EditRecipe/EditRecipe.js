@@ -112,7 +112,7 @@ function EditRecipe(props) {
     return (
         <section className='AddRecipe'>
             <section className='recipe-form'>
-                <h2>Edit Recipe Form</h2>
+                <h1>Edit Recipe Form</h1>
                 <form onSubmit={handleSubmit}>
                     <div className='input-fields'>
                         <label htmlFor='cocktail-name'>Cocktail Name</label>
@@ -127,7 +127,7 @@ function EditRecipe(props) {
                         })}</select>
                         <label htmlFor='description'>Description</label>
                         <textarea id='description' name='description' onChange={handleInputChange} />
-                        <h4>Ingredients</h4>
+                        <h2>Ingredients</h2>
                         {ingredients.map((ingredient, i) => {
                             return (
                                 <div className='ingredients' key={i}>
@@ -137,7 +137,7 @@ function EditRecipe(props) {
                                 </div>
                             )
                         })}
-                        <h4>Cocktail Steps</h4>
+                        <h2>Cocktail Steps</h2>
                         {cocktail_steps.map((step, i) => {
                             cocktail_steps[i].step_number = i +1;
                             return (

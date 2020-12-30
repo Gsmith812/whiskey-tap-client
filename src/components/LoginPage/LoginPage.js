@@ -42,7 +42,7 @@ function LoginPage(props) {
     return (
         <section className='LoginPage'>
             <form className='form-container' onSubmit={handleSubmit}>
-                <h2>Login</h2>
+                <h1>Login</h1>
                 <div className='input-fields'>
                     <label htmlFor='email'>E-mail Address</label>
                     <input type='email' id='email' name='email' placeholder='johndoe@gmail.com' onChange={handleInputsChanged} required />

@@ -11,7 +11,7 @@
     font-weight: bold;
 }
 .comment-item {
-    background-color: lavender;
+    background-color: #DAD2D8;
     border-radius: 1rem;
 }
 
@@ -24,16 +24,17 @@
     margin-left: 10%;
 }
 
-.comment-date {
-    text-align: right;
-}
-
-span {
-    background-color: chocolate;
-    color:white;
+.comment-badge {
+    background-color: #5A1807;
+    color: #FFFFFF;
     border-radius: 1rem;
     padding: 3px 5px;
     margin: 3px;
+    font-weight: bold;
+}
+
+.comment-date {
+   text-align: right;
 }
 
 .comment-form {
@@ -43,6 +44,7 @@ span {
     margin-right: auto;
     padding: 2rem 1rem;
     border-radius: 0 0 1rem 1rem;
+    padding-bottom: 4em;
 }
 
 .comment-form label {
@@ -52,21 +54,25 @@ span {
 
 .comment-form textarea {
     width: 100%;
-    min-height: 10vh;
+    min-height: 8em;
     border-radius: 1rem;
+    margin-bottom: 1em;
 }
 
 .comment-form button {
-    background-color: chocolate;
-    color: white;
+    background-color: #DAD2D8;
+    color: #000000;
     border: 0;
     border-radius: 1rem;
-    padding: .5rem 1rem;
-    float: right;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 10%;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .comment-links {
-    color: chocolate;
+    color: #5A1807;
 }
 
 .comment-error {
@@ -76,13 +82,13 @@ span {
 
 .edit-icon {
     float:right;
-    color: chocolate;
+    color: #ffffff;
     margin-right: 1rem;
     margin-top: 5px;
 }
 
 .delete-icon {
-    color: red;
+    color: #FFFFFF;
     float: right;
     margin-right: 1rem;
     margin-top: 5px;
@@ -90,4 +96,8 @@ span {
 
 .edit-buttons button{
     margin-right: 10px;
+}
+
+.Comments h2 {
+    color: #FFFFFF;
 }

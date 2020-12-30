@@ -65,7 +65,7 @@ function SignUpPage(props) {
     return (
         <section className='SignUpPage'>
             <form className='form-container' onSubmit={handleSubmit} onChange={handleInputFieldsChanged}>
-                <h2>Sign Up</h2>
+                <h1>Sign Up</h1>
                 <div className='input-fields'>
                     <label htmlFor='first-name'>First Name</label>
                     <input type='text' id='first-name' name='first_name' placeholder='John' required />

@@ -6,18 +6,21 @@
     margin-right: auto;
     margin-bottom: 1rem;
     border-radius: 1rem;
+    max-width: 600px;
 }
 
-.recipe-form h2 {
+.recipe-form h1 {
     color: white;
-    background-color: chocolate;
+    background-color: #5A1807;
     padding: .5rem 1rem;
     border-radius: 1rem 1rem 0 0;
+    font-size: 2em;
 }
 
-.input-fields h4 {
+.input-fields h2 {
     margin-bottom: 0;
     margin-top: 0;
+    font-size: 1em;
 }
 
 #description {

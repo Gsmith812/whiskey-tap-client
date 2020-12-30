@@ -37,7 +37,7 @@ function RecipeItem(props) {
             <Link to={`/recipes/${id}`} className='linked-recipe'>
                 <img src={whiskyIcon} alt='Whiskey glass thumbnail' />
                 <h3>{cocktail_name}</h3>
-                <p>Created by: {user}</p>
+                <p className='author'>Created by: {user}</p>
             </Link>
         </section>
    

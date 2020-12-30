@@ -139,7 +139,7 @@ function Comments(props) {
                             <section className='comment-item' key={i}>
                                 
                                 <div className='comment-header'>
-                                    <span>{comment.user_name}</span>
+                                    <span className='comment-badge'>{comment.user_name}</span>
                                     {
                                         (isLoggedIn && currentUser.id === comment.user_id) && 
                                             <>
@@ -149,7 +149,7 @@ function Comments(props) {
                                     }
                                 </div>
                                 <p className='comment-content'>{comment.content}</p>
-                                <p className='comment-date'><span>{formattedDate}</span></p>
+                                <p className='comment-date'><span className='comment-badge'>{formattedDate}</span></p>
                             </section>
                         )
                 })}

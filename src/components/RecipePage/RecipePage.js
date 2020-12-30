@@ -80,9 +80,9 @@ function RecipePage(props) {
                 }
                 {error && <div className='recipe-page-error'>{error.message}</div>}
                 <img src={cocktailImg} alt='Rocks glass for whiskey'/>
-                <h2>{recipe.cocktail_name}</h2>
-                <h3>Created by: {recipe.user}</h3>
-                <h4>Cocktail-Type: {recipe.cocktail_type}</h4>
+                <h1>{recipe.cocktail_name}</h1>
+                <h2>Created by: {recipe.user}</h2>
+                <h3>Cocktail-Type: {recipe.cocktail_type}</h3>
                 {
                     recipe.description !== null && 
                     (

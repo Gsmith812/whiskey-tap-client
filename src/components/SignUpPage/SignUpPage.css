@@ -9,8 +9,8 @@
     border-radius: 10px;
 }
 
-.form-container h2 {
-    background-color: chocolate;
+.form-container h1 {
+    background-color: #5A1807;
     margin-top: 0;
     padding: 1rem;
     border-radius: 10px 10px 0 0;
@@ -40,7 +40,7 @@
 }
 
 .form-button button {
-    background-color: lightblue;
+    background-color: #FFFFFF;
     font-weight: bold;
     border: 0;
     padding: .5rem 1rem;
