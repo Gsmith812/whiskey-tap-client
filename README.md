@@ -37,4 +37,4 @@ Run `npm install` to load all of the necessary dependencies
 
 This is the front-end client only.
 
-To take full advantage of the application get the back-end up and runnning at [https://github.com/Gsmith812/whiskey-tap-api](https://github.com/Gsmith812/whiskey-tap-api)
+To take full advantage of the application get the back-end up and running at [https://github.com/Gsmith812/whiskey-tap-api](https://github.com/Gsmith812/whiskey-tap-api)
